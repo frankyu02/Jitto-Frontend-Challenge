@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState } from "react";
 import styled from "styled-components";
 
@@ -49,6 +50,13 @@ const Wrapper = styled.div`
         cursor: pointer;
       }
     }
+    a {
+      color: var(--background-primary);
+      text-decoration: underline;
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
 `;
 export default function LoginForm() {
@@ -96,6 +104,9 @@ export default function LoginForm() {
         <button disabled={loading} type="submit">
           Login
         </button>
+        <p>
+          Don&apos;t have an account? <Link href={"/"}>Make One Here!</Link>
+        </p>
       </form>
     </Wrapper>
   );
