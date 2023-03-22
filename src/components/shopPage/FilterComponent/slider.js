@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const Wrapper = styled.div`
@@ -34,6 +34,12 @@ export default function Slider({ filters, setFilters }) {
   if (sliderValue > SLIDERMAX) {
     setSliderValue(SLIDERMAX);
   }
+  useEffect(() => {
+    setSliderValue(filters?.maxPrice ?? 0);
+    if (sliderValue > SLIDERMAX) {
+      setSliderValue(SLIDERMAX);
+    }
+  }, [filters]);
   const route = useRouter();
   const handleChange = (e) => {
     e.preventDefault();

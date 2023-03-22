@@ -18,11 +18,11 @@ const Wrapper = styled.div`
     height: 100%;
   }
   .products {
+    display: flex;
     width: 80%;
-    /* height: 100%; */
-    margin-top: 15px;
-    display: inline-flex;
     flex-wrap: wrap;
+    height: 0;
+    margin-top: 15px;
   }
 `;
 export default function ShopLayout() {

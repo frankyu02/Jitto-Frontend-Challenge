@@ -17,6 +17,7 @@ const Wrapper = styled.div`
   transition: 0.3s;
   align-items: center;
   display: flex;
+  z-index: 1000;
   flex-direction: column;
   .summaryContainer {
     width: 100%;

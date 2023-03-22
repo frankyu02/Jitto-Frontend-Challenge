@@ -18,7 +18,7 @@ const Card = styled.div`
     width: 100%;
     background-color: var(--background-primary);
     color: white;
-    z-index: 5000;
+    z-index: 5;
     transition: 0.3s;
     &:hover {
       cursor: pointer;
@@ -43,9 +43,11 @@ const Card = styled.div`
     font-size: 1.5em;
     padding: 0;
     margin: 0;
+    font-weight: bold;
   }
   .price {
     font-size: 1.2em;
+    font-weight: normal;
   }
 `;
 export default function ProductCard({ product, setCart, cart }) {

@@ -86,7 +86,7 @@ export default function NavBar() {
       );
       setNavContent(loggedInFromStorage ? loggedIn : notLoggedIn);
       setIsLoggedIn(loggedInFromStorage ?? false);
-      setName(JSON.parse(localStorage.getItem("jitto_logged_in")) ?? "");
+      setName(localStorage.getItem("jitto_username") ?? "");
     }
     updateNav();
     window.addEventListener("storage", updateNav);
